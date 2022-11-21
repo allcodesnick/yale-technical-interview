@@ -46,8 +46,11 @@ WHERE date_of_birth < '1990-08-07';
 SELECT * FROM yale_technical_interview.person WHERE person_id IN 
    (SELECT address_id FROM address WHERE address_type = "HOME");
 
--- QUESTION 6
-
+-- QUESTION 6 IN PROGRESS
+SELECT person.last_name, address.* AS BILLING_ADDRESS
+FROM yale_technical_interview.person
+INNER JOIN yale_technical_interview.address
+ON yale_technical_interview.person.person_id = yale_technical_interview.address.person_id;
 
 -- QUESTION 7
 SELECT address_type, COUNT(*) FROM yale_technical_interview.address
