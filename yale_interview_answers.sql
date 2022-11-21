@@ -48,12 +48,14 @@ SELECT * FROM yale_technical_interview.person WHERE person_id IN
 
 
 -- QUESTION 7
-
+SELECT address_type, COUNT(*) FROM yale_technical_interview.address
+GROUP BY address_type;
 
 -- QUESTION 8
 
 
 -- QUESTION 9
-
-   
-   
+UPDATE  person 
+SET occupation = 'X'
+WHERE person.person_id IN
+(SELECT address_type FROM address WHERE address_type = 'BILL' );
