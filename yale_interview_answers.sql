@@ -24,8 +24,10 @@ PRIMARY KEY(address_id),
 FOREIGN KEY(person_id) REFERENCES PERSON(person_id)
 );
 
--- Question 1
-
+-- Question 1 IN PROGRESS
+SELECT yale_technical_interview.person.*, person.preferred_first_name AS REPORTED_NAME
+FROM yale_technical_interview.person
+WHERE preferred_first_name IS NOT NULL;
 
 
 -- QUESTION 2
@@ -52,7 +54,7 @@ SELECT address_type, COUNT(*) FROM yale_technical_interview.address
 GROUP BY address_type;
 
 -- QUESTION 8 IN PROGRESS
-SELECT CustomerID AS ID, CustomerName AS Customer
+SELECT last_name, CustomerName AS Customer
 FROM Customers;
 
 -- QUESTION 9
