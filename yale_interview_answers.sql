@@ -51,8 +51,9 @@ SELECT * FROM yale_technical_interview.person WHERE person_id IN
 SELECT address_type, COUNT(*) FROM yale_technical_interview.address
 GROUP BY address_type;
 
--- QUESTION 8
-
+-- QUESTION 8 IN PROGRESS
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
 
 -- QUESTION 9
 UPDATE  person 
